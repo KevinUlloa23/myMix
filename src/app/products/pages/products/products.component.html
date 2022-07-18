@@ -1,0 +1,125 @@
+
+
+
+  <div class="container">
+    <mat-toolbar>
+      <button mat-raised-button
+              color="primary"
+              matTooltip="Crear un producto"
+              [routerLink]="['../crear-usuario']" >Create Product</button>
+      <div class="spacer"></div>
+      <button mat-raised-button matTooltip="Reorganizar los filtros"color="basic">Reorder Filters</button>
+    </mat-toolbar>
+  </div>
+
+
+<div fxLayout="display">
+<mat-toolbar>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input autocomplete="off">
+  </mat-form-field>
+
+    <mat-form-field class="container" appearance="standard">
+      <mat-label>Brand Name</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+      </mat-form-field>
+
+
+    <mat-form-field class="" appearance="standard">
+      <mat-label>Alcohol</mat-label>
+      <mat-select>
+        <mat-option value="one"  appearance="standard">First option</mat-option>
+        <mat-option value="two"  appearance="standard">Second option</mat-option>
+      </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="container" appearance="standard">
+        <mat-label>Status</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+        </mat-form-field>
+        <div class="container">
+          <button mat-raised-button color="accent" matTooltip="Limpiar los filtros">Clear Filters</button>
+        </div>
+
+</mat-toolbar>
+
+</div>
+
+<div class="mat-elevation-z8" >
+  <table mat-table [dataSource]="dataSource"  >
+
+  <!-- Brand Name -->
+  <ng-container matColumnDef="brandName">
+  <th mat-header-cell *matHeaderCellDef> Brand Name</th>
+  <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
+  </ng-container>
+
+    <!-- product ID -->
+    <ng-container matColumnDef="productId">
+      <th mat-header-cell *matHeaderCellDef> Product ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.productId}} </td>
+    </ng-container>
+
+    <!-- Product Name Column -->
+    <ng-container matColumnDef="productName">
+      <th mat-header-cell *matHeaderCellDef> Product Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+    </ng-container>
+
+    <!-- SKU Column -->
+    <ng-container matColumnDef="SKU">
+      <th mat-header-cell *matHeaderCellDef> SKU </th>
+      <td mat-cell *matCellDef="let element"> {{element.SKU}} </td>
+    </ng-container>
+
+     <!-- Price Column -->
+     <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+    </ng-container>
+
+    <!-- Alcohol Column -->
+    <ng-container matColumnDef="alcohol">
+      <th mat-header-cell *matHeaderCellDef> Alcohol </th>
+      <td mat-cell *matCellDef="let element"> <a>
+        <mat-icon>indeterminate_check_box</mat-icon>
+      </a> </td>
+    </ng-container>
+
+  <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+
+<!-- Paginador -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

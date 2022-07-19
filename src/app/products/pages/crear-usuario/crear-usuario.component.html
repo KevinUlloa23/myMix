@@ -5,84 +5,127 @@
 <mat-divider></mat-divider>
 <br>
 
+<mat-card class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
+  <div >
+    <mat-card-title>Creating Options</mat-card-title>
+  </div>
+  <div fxLayoutGap="10px">
+    <button mat-raised-button>Cancel</button>
+    <button mat-raised-button disabled>Saved</button>
+  </div>
+</mat-card>
+<hr>
+
 <div class="myCard">
 
-  <div>
-    <mat-card fxLayout="row" fxLayoutAlign="space-between start">
+    <mat-card fxLayout="row" fxLayoutGap.gt-lg="20px">
 
-      <div fxFlex="35" fxLayout="column" >
+      <div fxFlex="40" fxLayout="column" >
+
         <mat-form-field appearance="fill">
-          <mat-label>Input</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Select</mat-label>
+          <mat-label>Brand Name</mat-label>
           <mat-select>
             <mat-option value="one">First option</mat-option>
             <mat-option value="two">Second option</mat-option>
           </mat-select>
         </mat-form-field>
+
         <mat-form-field appearance="fill">
-          <mat-label>Textarea</mat-label>
+          <mat-label>Internal Name*</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Display Name*</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
           <textarea matInput></textarea>
         </mat-form-field>
+
+            <mat-slide-toggle>
+              Required
+            </mat-slide-toggle>
+
       </div>
 
-      <div fxFlex="15">
-          <div>
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div>
+            <div fxLayout="column">
+
+             <mat-form-field appearance="fill">
+                <mat-label>Type</mat-label>
+                <mat-select>
+                  <mat-option value="one">First option</mat-option>
+                  <mat-option value="two">Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field  appearance="fill">
+                <mat-label>Min Item Selected</mat-label>
+                <input matInput disabled>
+              </mat-form-field>
+
+              <mat-form-field  appearance="fill">
+                <mat-label>Min Item Quantity</mat-label>
+                <input matInput disabled>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Min Aggregated Quantity</mat-label>
+                <input matInput disabled>
+              </mat-form-field>
+
+
+                <mat-form-field width="100" appearance="fill">
+                  <mat-label>Step</mat-label>
+                  <input matInput disabled>
+                </mat-form-field>
+
+              </div>
+        </div>
+
+        <div>
+          <div fxLayout="column">
+
             <mat-form-field appearance="fill">
-              <mat-label>Input</mat-label>
-              <input matInput>
-            </mat-form-field>
-            <mat-form-field appearance="fill">
-              <mat-label>Select</mat-label>
+              <mat-label>Status</mat-label>
               <mat-select>
                 <mat-option value="one">First option</mat-option>
                 <mat-option value="two">Second option</mat-option>
               </mat-select>
             </mat-form-field>
+
             <mat-form-field appearance="fill">
-              <mat-label>Textarea</mat-label>
-              <textarea matInput></textarea>
+              <mat-label>Min Item Selected</mat-label>
+              <input matInput disabled>
             </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Min Item Quantity</mat-label>
+              <input matInput disabled>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Min Aggregated Quantity</mat-label>
+              <input matInput disabled>
+            </mat-form-field>
+
           </div>
       </div>
-      <div fxFlex="15">
-        <div>
-          <mat-form-field appearance="fill">
-            <mat-label>Input</mat-label>
-            <input matInput>
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Select</mat-label>
-            <mat-select>
-              <mat-option value="one">First option</mat-option>
-              <mat-option value="two">Second option</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Textarea</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
-        </div>
-    </div>
 
-      <div fxLayout="row" fxLayoutAlign="space-evenly start">
-        <button mat-raised-button>Cancel</button>
-        <button mat-raised-button>Save</button>
-        <button mat-raised-button>NUEVA MODIFICACION</button>
       </div>
-
-
-
 
     </mat-card>
 
 
-  </div>
-
-
 </div>
+<hr>
+<mat-card class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
+<button mat-raised-button color="primary">Add Item</button>
+</mat-card>
 
 
 

@@ -17,7 +17,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
@@ -45,7 +46,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatTooltipModule,
     MatSortModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSlideToggleModule
   ],
   exports: [
     MatTabsModule,
@@ -65,7 +67,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatTooltipModule,
     MatSortModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSlideToggleModule
   ]
 })
 export class MaterialModule { }

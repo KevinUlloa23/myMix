@@ -2,7 +2,7 @@
 
 
   <div class="container">
-    <mat-toolbar>
+    <mat-toolbar class="animate__animated animate__lightSpeedInLeft">
       <button mat-raised-button
               color="primary"
               matTooltip="Crear un producto"
@@ -14,23 +14,23 @@
 
 
 <div fxLayout="display">
-<mat-toolbar>
+<mat-toolbar class="animate__animated animate__lightSpeedInLeft">
 
-  <mat-form-field appearance="standard">
+  <mat-form-field appearance="standard" >
     <mat-label>Search</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input autocomplete="off">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input autocomplete="off">
   </mat-form-field>
 
     <mat-form-field class="container" appearance="standard">
       <mat-label>Brand Name</mat-label>
       <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
+        <mat-option value="one">Edited</mat-option>
+        <mat-option value="two">Double Edited</mat-option>
       </mat-select>
       </mat-form-field>
 
 
-    <mat-form-field class="" appearance="standard">
+    <mat-form-field class="container" appearance="standard">
       <mat-label>Alcohol</mat-label>
       <mat-select>
         <mat-option value="one"  appearance="standard">First option</mat-option>
@@ -41,8 +41,8 @@
       <mat-form-field class="container" appearance="standard">
         <mat-label>Status</mat-label>
         <mat-select>
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
+          <mat-option value="one">Active</mat-option>
+          <mat-option value="two">Inactive</mat-option>
         </mat-select>
         </mat-form-field>
         <div class="container">
@@ -54,7 +54,7 @@
 </div>
 
 <div class="mat-elevation-z8" >
-  <table mat-table [dataSource]="dataSource"  >
+  <table mat-table [dataSource]="dataSource" class="animate__animated animate__lightSpeedInLeft" >
 
   <!-- Brand Name -->
   <ng-container matColumnDef="brandName">

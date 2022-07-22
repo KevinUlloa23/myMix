@@ -1,74 +1,141 @@
 
-  <button mat-raised-button>
+  <button class="animate__animated animate__lightSpeedInLeft" mat-raised-button [routerLink]="['../core-producs']">
     <mat-icon>keyboard_backspace</mat-icon> Back to Option List </button>
 
 <mat-divider></mat-divider>
 <br>
 
-<mat-card class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
+<mat-card  class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
   <div >
-    <mat-card-title>Creating Options</mat-card-title>
+    <mat-card-title class="animate__animated animate__lightSpeedInLeft">Creating Options</mat-card-title>
   </div>
-  <div fxLayoutGap="10px">
+  <div fxLayoutGap="10px" class="animate__animated animate__lightSpeedInLeft">
     <button mat-raised-button>Cancel</button>
-    <button mat-raised-button disabled>Saved</button>
+    <button mat-raised-button [disabled]="creatingForm.invalid">Saved</button>
   </div>
 </mat-card>
 <hr>
 
-<div class="myCard">
 
-    <mat-card fxLayout="row" fxLayoutGap.gt-lg="20px">
+<form  class="myCard" (ngSubmit)="onSubmit()" [formGroup]="creatingForm" >
 
-      <div fxFlex="40" fxLayout="column" >
+  <div class="animate__animated animate__lightSpeedInLeft">
+      <mat-card fxLayout="row" fxLayoutGap.gt-lg="20px">
 
-        <mat-form-field appearance="fill">
-          <mat-label>Brand Name</mat-label>
-          <mat-select>
-            <mat-option value="one">First option</mat-option>
-            <mat-option value="two">Second option</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <div fxFlex="40" fxLayout="column" >
 
-        <mat-form-field appearance="fill">
-          <mat-label>Internal Name*</mat-label>
-          <input matInput>
-        </mat-form-field>
+          <mat-form-field appearance="fill"
+                          ngDefaultControl
+                          formControlName="brandName">
+            <mat-label>Brand Name</mat-label>
+            <mat-select>
+              <mat-option value="one">Edited</mat-option>
+              <mat-option value="two">Double Edited</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field appearance="fill">
-          <mat-label>Display Name*</mat-label>
-          <input matInput>
-        </mat-form-field>
+          <mat-form-field appearance="fill"
+                          >
+            <mat-label>Internal Name</mat-label>
+           <input matInput
+                  type="text"
+                  class="form-control"
+                  id="internalName"
+                  name="internalName"
+                  required
+                  ngDefaultControl
+                  formControlName="internalName">
+            <mat-error
+                 class="alert alert-warn">This field is required</mat-error>
+          </mat-form-field>
 
-        <mat-form-field appearance="fill">
-          <mat-label>Description</mat-label>
-          <textarea matInput></textarea>
-        </mat-form-field>
+          <mat-form-field appearance="fill" ngDefaultControl formControlName="displayName">
+            <mat-label>Display Name</mat-label>
+           <input matInput
+                  type="text"
+                  class="form-control"
+                  id="displayName"
+                  name="displayName"
+                  required
+                  ngDefaultControl
+                  formControlName="displayName">
+                  <mat-error
+                  class="alert alert-danger">This field is required</mat-error>
+          </mat-form-field>
 
-            <mat-slide-toggle>
-              Required
-            </mat-slide-toggle>
+          <mat-form-field appearance="fill" ngDefaultControl formControlName="description">
+            <mat-label>Description</mat-label>
+          <textarea matInput
+                    type="text"
+                    class="form-control"
+                    id="description"
+                    name="description"
+                    required
+                    ngDefaultControl
+                    formControlName="description"></textarea>
+                    <mat-error
+                    class="alert alert-warn">This field is required</mat-error>
+          </mat-form-field>
+<br>
+              <mat-slide-toggle>
+                Required
+              </mat-slide-toggle>
 
-      </div>
+        </div>
 
-      <div fxLayout="row" fxLayoutGap="20px">
-        <div>
+        <div fxLayout="row" fxLayoutGap="20px">
+          <div>
+              <div fxLayout="column">
+
+               <mat-form-field appearance="fill">
+                  <mat-label>Type</mat-label>
+                  <mat-select>
+                    <mat-option value="one">First option</mat-option>
+                    <mat-option value="two">Second option</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field  appearance="fill">
+                  <mat-label>Min Item Selected</mat-label>
+                  <input matInput disabled>
+                </mat-form-field>
+
+                <mat-form-field  appearance="fill">
+                  <mat-label>Min Item Quantity</mat-label>
+                  <input matInput disabled>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Min Aggregated Quantity</mat-label>
+                  <input matInput disabled>
+                </mat-form-field>
+
+                <br>
+                  <mat-form-field width="100" appearance="fill">
+                    <mat-label>Step</mat-label>
+                    <input matInput disabled>
+                  </mat-form-field>
+
+                </div>
+          </div>
+
+          <div>
             <div fxLayout="column">
 
-             <mat-form-field appearance="fill">
-                <mat-label>Type</mat-label>
+              <mat-form-field appearance="fill">
+                <mat-label>Status</mat-label>
                 <mat-select>
                   <mat-option value="one">First option</mat-option>
                   <mat-option value="two">Second option</mat-option>
                 </mat-select>
               </mat-form-field>
 
-              <mat-form-field  appearance="fill">
+              <mat-form-field appearance="fill">
                 <mat-label>Min Item Selected</mat-label>
                 <input matInput disabled>
               </mat-form-field>
 
-              <mat-form-field  appearance="fill">
+              <mat-form-field appearance="fill">
                 <mat-label>Min Item Quantity</mat-label>
                 <input matInput disabled>
               </mat-form-field>
@@ -78,53 +145,23 @@
                 <input matInput disabled>
               </mat-form-field>
 
-
-                <mat-form-field width="100" appearance="fill">
-                  <mat-label>Step</mat-label>
-                  <input matInput disabled>
-                </mat-form-field>
-
-              </div>
+            </div>
         </div>
 
-        <div>
-          <div fxLayout="column">
+        </div>
 
-            <mat-form-field appearance="fill">
-              <mat-label>Status</mat-label>
-              <mat-select>
-                <mat-option value="one">First option</mat-option>
-                <mat-option value="two">Second option</mat-option>
-              </mat-select>
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Min Item Selected</mat-label>
-              <input matInput disabled>
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Min Item Quantity</mat-label>
-              <input matInput disabled>
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Min Aggregated Quantity</mat-label>
-              <input matInput disabled>
-            </mat-form-field>
-
-          </div>
-      </div>
-
-      </div>
-
-    </mat-card>
+      </mat-card>
 
 
-</div>
+  </div>
+
+
+</form>
+
+
 <hr>
 <mat-card class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
-<button mat-raised-button color="primary">Add Item</button>
+<button class="animate__animated animate__lightSpeedInLeft" mat-raised-button color="primary">Add Item</button>
 </mat-card>
 
 

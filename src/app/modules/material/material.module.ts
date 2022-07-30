@@ -19,10 +19,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
@@ -52,8 +49,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatCardModule,
     MatGridListModule,
     MatSlideToggleModule,
-    ReactiveFormsModule,
-    FormsModule,
+    ReactiveFormsModule
+
 
   ],
   exports: [
@@ -76,8 +73,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatCardModule,
     MatGridListModule,
     MatSlideToggleModule,
-    ReactiveFormsModule,
-    FormsModule,
+    ReactiveFormsModule
 
   ]
 })

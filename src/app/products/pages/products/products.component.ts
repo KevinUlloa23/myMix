@@ -36,6 +36,16 @@ export class ProductsComponent implements OnInit {
     {brandName: 'double edited', productId: 17, productName: '10 Wings',           SKU: 'nd342567aerewquyeopnashd', price: 9.99, status: 'active'},
     {brandName: 'edited',        productId: 18, productName: 'Small Cake',         SKU: 'asdmfbj83e4efjksgdf32hsd', price: 7.99, status: 'active'},
     {brandName: 'double edited', productId: 19, productName: 'Coke',               SKU: 'asmndvashgcfd365saas55as', price: 9.99, status: 'active'},
+    {brandName: 'double edited', productId: 20, productName: 'hamburguer',         SKU: 'ajshdasdjhgvas564da7sd6r', price: 6.99, status: 'active'},
+    {brandName: 'double edited', productId: 21, productName: 'Bacon Cheeseburger', SKU: 'jbmnsdbvsjdhfg76534kjsdf', price: 8.99, status: 'active'},
+    {brandName: 'edited',        productId: 22, productName: 'Cowboy Burger',      SKU: 'mnblkajsy6ytqj323js3r3jb', price: 6.99, status: 'active'},
+    {brandName: 'double edited', productId: 23, productName: 'Itallian Special',   SKU: 'msdfbsjdhfglkjas9893bja6', price: 6.99, status: 'active'},
+    {brandName: 'edited',        productId: 24, productName: 'Buffalo Chicken',    SKU: 'a,nmbsmnabsddkqjuyyqe223', price: 4.99, status: 'active'},
+    {brandName: 'double edited', productId: 25, productName: 'Chicken Salad',      SKU: 'lalaksjshte23us8basgasd3', price: 2.99, status: 'active'},
+    {brandName: 'edited',        productId: 26, productName: 'Wing Combos',        SKU: 'asd3215asdnnusd8adhafag8', price: 3.99, status: 'active'},
+    {brandName: 'double edited', productId: 27, productName: '10 Wings',           SKU: 'nd342567aerewquyeopnashd', price: 9.99, status: 'active'},
+    {brandName: 'edited',        productId: 28, productName: 'Small Cake',         SKU: 'asdmfbj83e4efjksgdf32hsd', price: 7.99, status: 'active'},
+    {brandName: 'double edited', productId: 29, productName: 'Coke',               SKU: 'asmndvashgcfd365saas55as', price: 9.99, status: 'active'},
   ];
 
   displayedColumns: string[] = [ 'brandName', 'productId', 'productName', 'SKU', 'price', 'alcohol', 'status'];

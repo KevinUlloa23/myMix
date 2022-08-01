@@ -12,19 +12,17 @@ export class CrearUsuarioComponent implements OnInit {
 
 
 
-  constructor( private readonly fb: FormBuilder) {
+  constructor( private fb: FormBuilder) {
 
   }
 
   ngOnInit(): void {
     this.creatingForm  = this.initForm();
 
-
     this.creatingForm.get('type')?.
     valueChanges.subscribe(type => {
-      console.log('minItemSelected value changed')
-      console.log(type)
-
+      // console.log('minItemSelected value changed')
+      // console.log(type)
       if ( type === 'one' ) {
         this.creatingForm.get('minItemSelected')?.disable()
         this.creatingForm.get('minItemQuantity')?.disable()
@@ -47,10 +45,11 @@ export class CrearUsuarioComponent implements OnInit {
 
   initForm():FormGroup {
    return  this.fb.group({
+
       brandName       : ['', [Validators.required] ],
-      internalName    : ['', [Validators.required] ],
-      displayName     : ['', [Validators.required] ],
-      description     : ['', [Validators.required] ],
+      internalName    : ['', [Validators.required, Validators.minLength(3)] ],
+      displayName     : ['', [Validators.required, Validators.minLength(3)] ],
+      description     : ['', [Validators.required, Validators.minLength(3)] ],
 
       type            : ['', [Validators.required] ],
       minItemSelected : ['', [Validators.required] ],

@@ -19,6 +19,7 @@ export class CrearUsuarioComponent implements OnInit {
   ngOnInit(): void {
     this.creatingForm  = this.initForm();
 
+
     this.creatingForm.get('type')?.
     valueChanges.subscribe(type => {
       // console.log('minItemSelected value changed')
@@ -51,7 +52,7 @@ export class CrearUsuarioComponent implements OnInit {
       displayName     : ['', [Validators.required, Validators.minLength(3)] ],
       description     : ['', [Validators.required, Validators.minLength(3)] ],
 
-      type            : ['', [Validators.required] ],
+      type            : ['one', [Validators.required] ],
       minItemSelected : ['', [Validators.required] ],
       minItemQuantity : ['', [Validators.required] ],
       minAggregated   : ['', [Validators.required] ],

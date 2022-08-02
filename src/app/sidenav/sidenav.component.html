@@ -1,7 +1,7 @@
 
 <mat-sidenav-container fullscreen>
 
-  <mat-sidenav #sidenav mode="push">
+  <mat-sidenav #sidenav mode="side" opened>
 
     <mat-toolbar>
       <span class="spacer">My Mix</span>
@@ -19,12 +19,11 @@
       </a>
     </mat-nav-list> -->
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Locations
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item>1</button>
       <button mat-menu-item>1</button>
@@ -39,12 +38,11 @@
       </a>
     </mat-nav-list> -->
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           KU Partners
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item>1</button>
       <button mat-menu-item>2</button>
@@ -62,16 +60,15 @@
         </a>
     </mat-nav-list> -->
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Menus
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item
               routerLink="producs/core-producs"
-              (click)="sidenav.toggle()">
+              >
               Core Products
             </button>
       <button mat-menu-item>Product Categories</button>
@@ -88,12 +85,11 @@
         </a>
     </mat-nav-list> -->
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Catalogs
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item>Catalogs</button>
       <button mat-menu-item>Legacy Products</button>
@@ -105,12 +101,11 @@
          (click)="sidenav.toggle()">Delivery</a>
     </mat-nav-list> -->
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Delivery
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item>1</button>
       <button mat-menu-item>2</button>
@@ -129,12 +124,11 @@
         </a>
     </mat-nav-list> -->
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Integrations
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item>Lost Integrations</button>
       <button mat-menu-item>Integrations</button>
@@ -143,12 +137,11 @@
 
 
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
           Settings
         </mat-panel-title>
-      <mat-icon>expand_more</mat-icon>
       </mat-expansion-panel-header>
       <button mat-menu-item>Notifications</button>
       <button mat-menu-item>Lockers</button>

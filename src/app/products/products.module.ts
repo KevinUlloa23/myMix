@@ -8,7 +8,7 @@ import { ProductsComponent } from './pages/products/products.component';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { MaterialModule } from '../modules/material/material.module';
-import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
+import { CrearProductComponent } from './pages/crear-product/crear-product.component';
 
 
 
@@ -19,7 +19,7 @@ import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.compo
   declarations: [
     CoreProducsComponent,
     ProductsComponent,
-    CrearUsuarioComponent
+    CrearProductComponent
 
   ],
   imports: [

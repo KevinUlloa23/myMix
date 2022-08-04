@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Productservice } from 'src/app/service/product.service';
+import { Router } from '@angular/router';
 
 
 export interface PeriodicElement {
@@ -55,8 +57,8 @@ export class ProductsComponent implements OnInit {
 
 
 
-  constructor() {
-
+  constructor( private productService: Productservice,
+               private router: Router ) {
   }
 
   ngOnInit(): void {
@@ -73,6 +75,10 @@ export class ProductsComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  goToDetails( product:any ) {
+    localStorage.setItem('product', JSON.stringify(product) )
+    this.router.navigate(['producs/crear-product/'+ product.productId] );
+  }
 
 
 }

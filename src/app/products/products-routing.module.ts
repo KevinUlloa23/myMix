@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CoreProducsComponent } from './pages/core-producs/core-producs.component';
-import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
+import { CrearProductComponent } from './pages/crear-product/crear-product.component';
 
 
 
@@ -12,7 +12,8 @@ const routes: Routes = [
 //    component: CoreProducsComponent,
     children: [
     { path: 'core-producs', component: CoreProducsComponent },
-    { path: 'crear-usuario', component: CrearUsuarioComponent },
+    { path: 'crear-product', component: CrearProductComponent },
+    { path: 'crear-product/:id', component: CrearProductComponent },
 
     ]
  }

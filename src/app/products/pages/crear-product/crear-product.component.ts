@@ -1,23 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-crear-usuario',
-  templateUrl: './crear-usuario.component.html',
-  styleUrls: ['crear-usuario.component.scss'],
+  selector: 'app-crear-product',
+  templateUrl: './crear-product.component.html',
+  styleUrls: ['crear-product.component.scss'],
 })
-export class CrearUsuarioComponent implements OnInit {
+export class CrearProductComponent implements OnInit {
 
   creatingForm : FormGroup = new FormGroup({});
+  id = '';
 
 
-
-  constructor( private fb: FormBuilder) {
+  constructor( private fb: FormBuilder,
+               private router: Router,
+               private route: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
     this.creatingForm  = this.initForm();
+    this.id = this.route.snapshot.paramMap.get('id')!
+
+    const product = JSON.parse(localStorage.getItem('product')!);
+    if (product) {
+      this.creatingForm.patchValue(product);
+    }
+
 
 
     this.creatingForm.get('type')?.
@@ -41,6 +51,8 @@ export class CrearUsuarioComponent implements OnInit {
       };
 
    })
+
+
 
   }
 

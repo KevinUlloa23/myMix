@@ -6,7 +6,7 @@
       <button mat-raised-button
               color="primary"
               matTooltip="Crear un producto"
-              [routerLink]="['../crear-usuario']" >Create Product</button>
+              [routerLink]="['../crear-product']" >Create Product</button>
       <div class="spacer"></div>
       <button mat-raised-button matTooltip="Reorganizar los filtros"color="basic">Reorder Filters</button>
     </mat-toolbar>
@@ -65,7 +65,7 @@
     <!-- product ID -->
     <ng-container matColumnDef="productId">
       <th mat-header-cell *matHeaderCellDef> Product ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.productId}} </td>
+      <td mat-cell *matCellDef="let element" (click)="goToDetails(element)"> {{element.productId}} </td>
     </ng-container>
 
     <!-- Product Name Column -->

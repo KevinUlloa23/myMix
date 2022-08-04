@@ -29,8 +29,8 @@
                           >
             <mat-label>Brand Name</mat-label>
             <mat-select formControlName="brandName">
-              <mat-option value="one">Edited</mat-option>
-              <mat-option value="two">Double Edited</mat-option>
+              <mat-option value="edited">Edited</mat-option>
+              <mat-option value="double Edited<">Double Edited</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -172,6 +172,8 @@
 <mat-card class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
 <button class="animate__animated animate__fadeIn" mat-raised-button color="primary">Add Item</button>
 </mat-card>
+
+<h1>{{id}}</h1>
 <!--
 <hr>
 <h1>Touched:</h1>

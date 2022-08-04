@@ -75,6 +75,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatSlideToggleModule,
     ReactiveFormsModule
 
+  ],
+  providers: [
+
   ]
 })
 export class MaterialModule { }

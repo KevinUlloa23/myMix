@@ -1,13 +1,18 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-
-
-
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class Productservice {
+  product: any;
 
-  constructor() {
-  console.log('servicio inicializado');
+  constructor() {}
 
+  setProductData(product: any): void {
+    this.product = product;
+  }
+
+  getProductData(): any {
+    return this.product;
   }
 }

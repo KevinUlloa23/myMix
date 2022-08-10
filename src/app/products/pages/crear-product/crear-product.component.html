@@ -11,16 +11,19 @@
   </div>
   <div fxLayoutGap="10px" class="animate__animated animate__fadeIn">
     <button mat-raised-button>Cancel</button>
-    <button mat-raised-button type="submit" [disabled]="creatingForm.invalid" >Saved</button>
+    <button mat-raised-button type="submit" [disabled]="creatingForm.invalid" (click)="editItem()" >Edit</button>
   </div>
 </mat-card>
 <hr>
 
 
-<form  class="myCard" [formGroup]="creatingForm" >
+<form  class="myCard" [formGroup]="creatingForm">
 
   <div class="animate__animated animate__fadeIn">
       <mat-card fxLayout="row" fxLayoutGap.gt-lg="20px">
+
+        <ng-template #name></ng-template>
+
 
         <div fxFlex="40" fxLayout="column" >
 
@@ -30,7 +33,7 @@
             <mat-label>Brand Name</mat-label>
             <mat-select formControlName="brandName">
               <mat-option value="edited">Edited</mat-option>
-              <mat-option value="double Edited<">Double Edited</mat-option>
+              <mat-option value="doubleEdited">Double Edited</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -170,7 +173,7 @@
 
 <hr>
 <mat-card class="myCard" fxLayout="row" fxLayoutAlign="space-between start">
-<button class="animate__animated animate__fadeIn" mat-raised-button color="primary">Add Item</button>
+<button class="animate__animated animate__fadeIn" mat-raised-button color="primary" >Add Item</button>
 </mat-card>
 
 <h1>{{id}}</h1>

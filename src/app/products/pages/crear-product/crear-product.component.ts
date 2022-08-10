@@ -11,6 +11,7 @@ import { Productservice } from '../../../service/product.service';
 export class CrearProductComponent implements OnInit {
   creatingForm: FormGroup = new FormGroup({});
   id = '';
+  form: [] = [];
 
   constructor(
     private fb            : FormBuilder,
@@ -23,7 +24,7 @@ export class CrearProductComponent implements OnInit {
     this.creatingForm = this.initForm();
     this.id = this.route.snapshot.paramMap.get('id')!;
 
-    const productData = this.productService.getProductData();
+    const productData = this.productService.getProductDataById();
     if (productData) {
       this.creatingForm.patchValue(productData);
     }
@@ -66,8 +67,24 @@ export class CrearProductComponent implements OnInit {
       maxItemQuantity: [{ value: '', disabled: true }, [Validators.required]],
       maxAggregated  : [{ value: '', disabled: true }, [Validators.required]],
 
+      productId      :  [{ value: '' }, [] ]
+
     });
   }
+
+  editItem(){
+    const data = this.creatingForm.getRawValue()
+    this.productService.editItem(data)
+  }
+
+  // Enviar data al svc
+  // buscar data dentro del array (index o ID)
+  // como poner indice en una tabla de angular material, enviar a la funcion para que la funcion lo envie al servicio.
+
+
+
+
+
   // initForm2(): FormGroup {
   //   return this.fb.group({
 

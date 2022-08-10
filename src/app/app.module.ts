@@ -11,6 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './modules/material/material.module';
+
 import { Productservice } from './service/product.service';
 
 
@@ -35,7 +36,7 @@ import { Productservice } from './service/product.service';
 
 
   ],
-  providers: [ Productservice],
+  providers: [ Productservice ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

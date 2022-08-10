@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CoreProducsComponent } from './pages/core-producs/core-producs.component';
-import { ProductsComponent } from './pages/products/products.component';
+import { ProductsListComponent } from './pages/products-list/products-list.component';
 
 
 import { ProductsRoutingModule } from './products-routing.module';
@@ -18,7 +18,7 @@ import { CrearProductComponent } from './pages/crear-product/crear-product.compo
 @NgModule({
   declarations: [
     CoreProducsComponent,
-    ProductsComponent,
+    ProductsListComponent,
     CrearProductComponent
 
   ],

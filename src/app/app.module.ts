@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './modules/material/material.module';
 
 import { Productservice } from './service/product.service';
+import { IntegrationsComponent } from './products/pages/integrations/integrations.component';
 
 
 
@@ -23,6 +24,7 @@ import { Productservice } from './service/product.service';
   declarations: [
     AppComponent,
     SidenavComponent,
+    IntegrationsComponent,
 
 
   ],

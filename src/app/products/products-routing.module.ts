@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CoreProducsComponent } from './pages/core-producs/core-producs.component';
 import { CrearProductComponent } from './pages/crear-product/crear-product.component';
+import { IntegrationsComponent } from './pages/integrations/integrations.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'core-producs', component: CoreProducsComponent },
     { path: 'crear-product', component: CrearProductComponent },
     { path: 'crear-product/:id', component: CrearProductComponent },
+    { path: 'integrations', component: IntegrationsComponent },
 
     ]
  }

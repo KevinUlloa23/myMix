@@ -19,7 +19,8 @@ import { CrearProductComponent } from './pages/crear-product/crear-product.compo
   declarations: [
     CoreProducsComponent,
     ProductsListComponent,
-    CrearProductComponent
+    CrearProductComponent,
+
 
   ],
   imports: [

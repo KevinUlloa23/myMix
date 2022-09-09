@@ -1,0 +1,82 @@
+
+
+
+
+  <div class="container">
+    <mat-toolbar class="animate__animated animate__fadeIn">
+      <button mat-raised-button
+              color="primary"
+              matTooltip="Crear un producto"
+              [routerLink]="['../crear-product']" >Create Integration</button>
+      <div class="spacer"></div>
+    </mat-toolbar>
+  </div>
+
+  <div fxLayout="display">
+    <mat-toolbar class="animate__animated animate__fadeIn">
+
+      <mat-form-field appearance="standard" >
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input autocomplete="off">
+        <div class="spacer"></div>
+
+      </mat-form-field>
+      <div class="spacer"></div>
+      <button mat-raised-button matTooltip="Reorganizar los filtros"color="basic">Clear Filters</button>
+
+      </mat-toolbar>
+      </div>
+
+      <div class="mat-elevation-z8" >
+        <table mat-table [dataSource]="dataSource" class="animate__animated animate__fadeIn" >
+
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element" > {{element.id}} </td>
+            //(click)="goToDetails(element)"
+          </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
+        </ng-container>
+
+
+          <!-- Active Column -->
+          <ng-container matColumnDef="active">
+            <th mat-header-cell *matHeaderCellDef> Active </th>
+            <td mat-cell *matCellDef="let element"> {{element.internalName}} </td>
+          </ng-container>
+
+          <!-- Type Column -->
+          <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.SKU}} </td>
+          </ng-container>
+
+           <!-- Integration Column -->
+           <ng-container matColumnDef="integration">
+            <th mat-header-cell *matHeaderCellDef> Integration </th>
+            <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+          </ng-container>
+
+          <!-- Edit Column -->
+          <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Edit </th>
+            <td mat-cell *matCellDef="let element"> <a>
+              <mat-icon>indeterminate_check_box</mat-icon>
+            </a> </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+        </table>
+
+
+      </div>
+
+

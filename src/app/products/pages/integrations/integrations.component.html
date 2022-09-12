@@ -40,14 +40,14 @@
         <!-- Name Column -->
         <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
         </ng-container>
 
 
           <!-- Active Column -->
           <ng-container matColumnDef="active">
             <th mat-header-cell *matHeaderCellDef> Active </th>
-            <td mat-cell *matCellDef="let element"> {{element.internalName}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.active}} </td>
           </ng-container>
 
           <!-- Type Column -->
@@ -59,14 +59,14 @@
            <!-- Integration Column -->
            <ng-container matColumnDef="integration">
             <th mat-header-cell *matHeaderCellDef> Integration </th>
-            <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
           </ng-container>
 
           <!-- Edit Column -->
           <ng-container matColumnDef="edit">
             <th mat-header-cell *matHeaderCellDef> Edit </th>
             <td mat-cell *matCellDef="let element"> <a>
-              <mat-icon>indeterminate_check_box</mat-icon>
+              <mat-icon>edit</mat-icon>
             </a> </td>
           </ng-container>
 
